@@ -12,6 +12,7 @@ import 'package:example/demos/editor_configs/demo_mobile_editing_android.dart';
 import 'package:example/demos/editor_configs/demo_mobile_editing_ios.dart';
 import 'package:example/demos/example_editor/example_editor.dart';
 import 'package:example/demos/in_the_lab/feature_action_tags.dart';
+import 'package:example/demos/in_the_lab/feature_mk_tags.dart';
 import 'package:example/demos/in_the_lab/feature_pattern_tags.dart';
 import 'package:example/demos/in_the_lab/feature_stable_tags.dart';
 import 'package:example/demos/flutter_features/demo_inline_widgets.dart';
@@ -296,6 +297,10 @@ final _menu = <_MenuGroup>[
         },
       ),
       _MenuItem(
+          icon: Icons.format_bold_rounded,
+          title: 'Markdown Formatting',
+          pageBuilder: (context) => MKTagsFeatureDemo()),
+      _MenuItem(
         icon: Icons.account_circle,
         title: 'User Tags',
         pageBuilder: (context) {
@@ -579,10 +584,11 @@ class _DrawerButton extends StatelessWidget {
               return Colors.transparent;
             }),
             // splashFactory: NoSplash.splashFactory,
-            foregroundColor:
-                MaterialStateColor.resolveWith((states) => isSelected ? Colors.white : const Color(0xFFBBBBBB)),
+            foregroundColor: MaterialStateColor.resolveWith((states) =>
+                isSelected ? Colors.white : const Color(0xFFBBBBBB)),
             elevation: MaterialStateProperty.resolveWith((states) => 0),
-            padding: MaterialStateProperty.resolveWith((states) => const EdgeInsets.all(16))),
+            padding: MaterialStateProperty.resolveWith(
+                (states) => const EdgeInsets.all(16))),
         onPressed: isSelected ? null : onPressed,
         child: Row(
           children: [

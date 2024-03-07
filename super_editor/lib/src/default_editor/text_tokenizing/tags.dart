@@ -254,6 +254,14 @@ class TagRule {
 
     return buffer.toString();
   }
+
+  /// Star [TagRule] for Markdown style formatting.
+  /// 
+  /// Used for implementing bold and italic formatting in markdown. 
+  /// `**` for bold and `*` for italic.
+  /// [ticket](https://github.com/superlistapp/super_editor/issues/1866)
+  static const mkFormattingTagRule = TagRule(trigger: "*");
+
 }
 
 /// A [Tag] and its position within a [Document].
