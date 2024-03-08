@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:attributed_text/attributed_text.dart';
 import 'package:super_editor/src/default_editor/text.dart';
 import 'package:super_editor/super_editor.dart';
